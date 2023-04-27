@@ -1,7 +1,14 @@
-D:\idea project\imooc-news\imooc-news-dev\imooc-news-dev-service-user\src\main\java\com\imooc\user\controller\hello.java
+D:\idea project\imooc-news\imooc-news-dev\imooc-news-dev-service-user\src\main\java\com\imooc\user\controller\AppUserMngController.java
+D:\idea project\imooc-news\imooc-news-dev\imooc-news-dev-service-user\src\main\java\com\imooc\user\service\impl\AppUserServiceImpl.java
+D:\idea project\imooc-news\imooc-news-dev\imooc-news-dev-service-user\src\main\java\com\imooc\user\service\impl\FanServiceImpl.java
 D:\idea project\imooc-news\imooc-news-dev\imooc-news-dev-service-user\src\main\java\com\imooc\user\Application.java
+D:\idea project\imooc-news\imooc-news-dev\imooc-news-dev-service-user\src\main\java\com\imooc\user\controller\MyFansController.java
 D:\idea project\imooc-news\imooc-news-dev\imooc-news-dev-service-user\src\main\java\com\imooc\user\service\impl\UserServiceImpl.java
-D:\idea project\imooc-news\imooc-news-dev\imooc-news-dev-service-user\src\main\java\com\imooc\user\service\UserService.java
+D:\idea project\imooc-news\imooc-news-dev\imooc-news-dev-service-user\src\main\java\com\imooc\user\service\FanService.java
 D:\idea project\imooc-news\imooc-news-dev\imooc-news-dev-service-user\src\main\java\com\imooc\user\controller\PassPortController.java
+D:\idea project\imooc-news\imooc-news-dev\imooc-news-dev-service-user\src\main\java\com\imooc\user\service\AppUserService.java
+D:\idea project\imooc-news\imooc-news-dev\imooc-news-dev-service-user\src\main\java\com\imooc\user\controller\hello.java
+D:\idea project\imooc-news\imooc-news-dev\imooc-news-dev-service-user\src\main\java\com\imooc\user\service\UserService.java
+D:\idea project\imooc-news\imooc-news-dev\imooc-news-dev-service-user\src\main\java\com\imooc\user\mapper\FansMapper.java
 D:\idea project\imooc-news\imooc-news-dev\imooc-news-dev-service-user\src\main\java\com\imooc\user\controller\UserController.java
 D:\idea project\imooc-news\imooc-news-dev\imooc-news-dev-service-user\src\main\java\com\imooc\user\mapper\AppUserMapper.java

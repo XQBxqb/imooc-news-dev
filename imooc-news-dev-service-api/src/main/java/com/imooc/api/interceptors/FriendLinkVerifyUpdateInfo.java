@@ -25,14 +25,9 @@ public class FriendLinkVerifyUpdateInfo implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        String header = request.getHeader("Content-Type");
-        //System.out.println("----header"+header);
-        String method = request.getMethod();
-        //System.out.println("----method:"+method);
         FriendLinkMngSaveMOWrapper saveMOWrapper = new FriendLinkMngSaveMOWrapper(request);
         String body = saveMOWrapper.getBody();
         SaveFriendLink saveFriendLink = JsonUtils.jsonToPojo(body, SaveFriendLink.class);
-        //System.out.println("接收到的saveFriendLink:"+saveFriendLink.getLinkName()+saveFriendLink.getLinkUrl());
         if(!isUrl(saveFriendLink.getLinkUrl())) {GraceException.display(ResponseStatusEnum.FAILED);return false;}
         return true;
     }

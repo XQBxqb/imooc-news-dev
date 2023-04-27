@@ -15,6 +15,7 @@ import com.imooc.user.mapper.AppUserMapper;
 import com.imooc.user.service.UserService;
 import com.imooc.utils.DesensitizationUtil;
 import com.imooc.utils.extend.DateUtil;
+import org.slf4j.Logger;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,6 +23,8 @@ import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
 
 import java.util.Date;
+
+import static org.slf4j.LoggerFactory.getLogger;
 
 /**
  * @author 昴星
@@ -31,6 +34,7 @@ import java.util.Date;
 
 @Service
 public class UserServiceImpl implements UserService {
+    final static Logger logger= getLogger(UserServiceImpl.class);
 
     @Autowired
     private AppUserMapper appUserMapper;

@@ -36,14 +36,12 @@ public class InterceptorConfigInterceptor implements WebMvcConfigurer {
     public void addInterceptors(InterceptorRegistry registry) {
        //addInterceptor参数是实现HandlerIn..的实现类
         registry.addInterceptor(passPortInterceptor())
-                .addPathPatterns("/passport/getSMSCode")
-                .addPathPatterns("/passport/doLogin")
-                .addPathPatterns("/passport/logout");
+                .addPathPatterns("/passport/getSMSCode");
 
         registry.addInterceptor(userInterceptor())
                 .addPathPatterns("/user/getAccountInfo")
-                .addPathPatterns(("/user/updateUserInfo"))
-                .addPathPatterns(("/user/getUserInfo"));
+                .addPathPatterns("/user/updateUserInfo")
+                .addPathPatterns("/user/getUserInfo");
 
         registry.addInterceptor(adminTokenInterceptor())
                 .addPathPatterns("/adminMng/adminIsExist")
@@ -51,14 +49,11 @@ public class InterceptorConfigInterceptor implements WebMvcConfigurer {
                 .addPathPatterns("/adminMng/addNewAdmin")
                 .addPathPatterns("/adminMng/adminFaceLogin")
                 .addPathPatterns("/adminMng/adminLogout")
-                .addPathPatterns("/adminMng/adminLogin")
-                .addPathPatterns("/appUser/ueryAll")
+                .addPathPatterns("/appUser/queryAll")
                 .addPathPatterns("/categoryMng/getCatList")
                 .addPathPatterns("/categoryMng/saveOrUpdateCategory");
 
         registry.addInterceptor(friendLinkVerifyUpdateInfo())
-                .addPathPatterns("/friendLinkMng/saveOrUpdateFriendLink")
-                .addPathPatterns("/friendLinkMng/getFriendLinkList")
-                .addPathPatterns("/friendLinkMng/delete");
+                .addPathPatterns("/friendLinkMng/saveOrUpdateFriendLink");
     }
 }

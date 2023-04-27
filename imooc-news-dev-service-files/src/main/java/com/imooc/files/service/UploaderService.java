@@ -31,7 +31,7 @@ public interface UploaderService {
      * @author: 昴星
      * @time: 2023/3/25 20:26
      */
-    public String uploadOOS(MultipartFile file,String userId,String fileExtName) throws Exception;
+    public String uploadOOS(MultipartFile file,String userId,String fileExtName,String rootDirectory) throws Exception;
     /**
      * @description:这个就是用于流实现oos的上传
      * @param faceStream

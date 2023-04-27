@@ -2,6 +2,7 @@ package com.imooc.admin.service;
 
 import com.imooc.pojo.mo.FriendLinkMO;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -14,8 +15,10 @@ import java.util.List;
 
 public interface FriendLinkService {
     List<FriendLinkMO> queryFriendLinkList();
-
+    @Transactional
     void insertFriendLink(FriendLinkMO friendLinkMO);
-
+    @Transactional
     void deleteFriendLink(String linkId);
+
+    List<FriendLinkMO> queryFriendLinkWithNotDelete();
 }

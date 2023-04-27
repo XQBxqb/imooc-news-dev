@@ -32,6 +32,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.slf4j.LoggerFactory.getLogger;
 
@@ -53,6 +55,7 @@ public class FileUpLoaderController implements FileUpLoaderControllerApi {
     @Autowired
     private GridFSBucket gridFSBucket;
 
+
     @Override
     public GraceJSONResult uploadFace(String userId,
                                       MultipartFile file) throws Exception {
@@ -65,7 +68,7 @@ public class FileUpLoaderController implements FileUpLoaderControllerApi {
            !suffixName.equalsIgnoreCase("jpg")&&
            !suffixName.equalsIgnoreCase("bmp"))
         {return GraceJSONResult.errorCustom(ResponseStatusEnum.FILE_FORMATTER_FAILD);}
-        String picPath=uploaderService.uploadOOS(file,userId,suffixName);
+        String picPath=uploaderService.uploadOOS(file,userId,suffixName,fileResource.getObjectName());
         if(StringUtils.isBlank(picPath)) return GraceJSONResult.errorCustom(ResponseStatusEnum.FILE_UPLOAD_FAILD);
         //logger.info("--------Path  :  "+ fileResource.getOssHost() +picPath);
         return GraceJSONResult.ok(fileResource.getOssHost()+picPath);
@@ -144,5 +147,24 @@ public class FileUpLoaderController implements FileUpLoaderControllerApi {
         ByteArrayInputStream inputStream = new ByteArrayInputStream(bytes);
         uploaderService.uploadFaceOOSByStream(inputStream,fileResource.getFaceTempDataBaseObjectName(),".png");
         return GraceJSONResult.ok(fileBase64);
+    }
+
+    @Override
+    public GraceJSONResult uploadSomeFiles(String userId, MultipartFile[] files) throws Exception {
+        if(StringUtils.isBlank(userId)) return GraceJSONResult.errorMsg("传输异常");
+        List<String> imgListUrl= new ArrayList<>();
+        for(MultipartFile file:files){
+            String fileName = file.getOriginalFilename();
+            String[] str = fileName.split("\\.");
+            String suffixName=str[str.length-1];
+            if(!suffixName.equalsIgnoreCase("png")&&
+               !suffixName.equalsIgnoreCase("jpg")&&
+               !suffixName.equalsIgnoreCase("bmp"))
+            continue;
+            String picUrl=uploaderService.uploadOOS(file,userId,suffixName,fileResource.getArticleImgDataBase());
+            if(StringUtils.isBlank(picUrl)) continue;
+            imgListUrl.add(picUrl);
+        }
+        return GraceJSONResult.ok(imgListUrl);
     }
 }

@@ -8,6 +8,11 @@
   ],
   "properties": [
     {
+      "name": "file.article-img-data-base",
+      "type": "java.lang.String",
+      "sourceType": "com.imooc.files.FileResource"
+    },
+    {
       "name": "file.bucket-name",
       "type": "java.lang.String",
       "sourceType": "com.imooc.files.FileResource"

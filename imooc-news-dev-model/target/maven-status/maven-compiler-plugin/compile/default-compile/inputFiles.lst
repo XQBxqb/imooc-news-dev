@@ -6,8 +6,14 @@ D:\idea project\imooc-news\imooc-news-dev\imooc-news-dev-model\src\main\java\com
 D:\idea project\imooc-news\imooc-news-dev\imooc-news-dev-model\src\main\java\com\imooc\pojo\AdminUser.java
 D:\idea project\imooc-news\imooc-news-dev\imooc-news-dev-model\src\main\java\com\imooc\pojo\Comments.java
 D:\idea project\imooc-news\imooc-news-dev\imooc-news-dev-model\src\main\java\com\imooc\pojo\AppUser.java
+D:\idea project\imooc-news\imooc-news-dev\imooc-news-dev-model\src\main\java\com\imooc\pojo\Article.java
+D:\idea project\imooc-news\imooc-news-dev\imooc-news-dev-model\src\main\java\com\imooc\pojo\bo\NewArticleBO.java
 D:\idea project\imooc-news\imooc-news-dev\imooc-news-dev-model\src\main\java\com\imooc\pojo\bo\UpdateUserInfoBO.java
+D:\idea project\imooc-news\imooc-news-dev\imooc-news-dev-model\src\main\java\com\imooc\pojo\vo\RegionRatioVO.java
+D:\idea project\imooc-news\imooc-news-dev\imooc-news-dev-model\src\main\java\com\imooc\pojo\vo\IndexArticleVO.java
 D:\idea project\imooc-news\imooc-news-dev\imooc-news-dev-model\src\main\java\com\imooc\pojo\bo\RegistLoginBO.java
+D:\idea project\imooc-news\imooc-news-dev\imooc-news-dev-model\src\main\java\com\imooc\pojo\vo\FansCountsVO.java
 D:\idea project\imooc-news\imooc-news-dev\imooc-news-dev-model\src\main\java\com\imooc\pojo\bo\AdminLoginBO.java
 D:\idea project\imooc-news\imooc-news-dev\imooc-news-dev-model\src\main\java\com\imooc\pojo\bo\NewAdminBO.java
+D:\idea project\imooc-news\imooc-news-dev\imooc-news-dev-model\src\main\java\com\imooc\pojo\Fans.java
 D:\idea project\imooc-news\imooc-news-dev\imooc-news-dev-model\src\main\java\com\imooc\pojo\bo\CategoryBO.java

@@ -2,6 +2,7 @@ package com.imooc.admin;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.context.annotation.ComponentScan;
 import tk.mybatis.spring.annotation.MapperScan;
 
@@ -11,6 +12,7 @@ import tk.mybatis.spring.annotation.MapperScan;
  * @explain
  */
 @SpringBootApplication
+@ServletComponentScan(basePackages = {"com.imooc.api.filters"})
 @ComponentScan(basePackages = {"com.imooc","org.n3r.idworker"})
 @MapperScan(basePackages = {"com.imooc.admin.mapper"})
 public class Application {

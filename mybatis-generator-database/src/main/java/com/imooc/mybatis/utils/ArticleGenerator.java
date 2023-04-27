@@ -13,11 +13,16 @@ import java.util.List;
 public class ArticleGenerator {
 
 	public void generator() throws Exception {
-
+		File aNew = new File("new");
+		aNew.mkdir();
 		List<String> warnings = new ArrayList<String>();
 		boolean overwrite = true;
 		//指定 逆向工程配置文件
-		File configFile = new File("D:\\idea project\\imooc-news\\imooc-news-dev\\mybatis-generator-database\\generatorConfig-article.xml");
+		File configFile = new File(
+
+				"mybatis-generator-database"+
+				File.separator+
+				"generatorConfig-article.xml");
 		ConfigurationParser cp = new ConfigurationParser(warnings);
 		Configuration config = cp.parseConfiguration(configFile);
 		DefaultShellCallback callback = new DefaultShellCallback(overwrite);

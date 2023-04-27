@@ -26,7 +26,6 @@ public interface FileUpLoaderControllerApi {
      * @author: 昴星
      * @time: 2023/4/8 13:36
      */
-    @ApiOperation(value = "上传用户头像",notes="上传用户头像",httpMethod = "POST")
     @PostMapping ("/uploadFace")
     public GraceJSONResult uploadFace(@RequestParam String userId, MultipartFile file) throws Exception;
     /**
@@ -64,4 +63,15 @@ public interface FileUpLoaderControllerApi {
                                                      @PathVariable(value = "faceId") String faceId,
                                                      HttpServletRequest request,
                                                      HttpServletResponse response) throws Exception;
+
+    /**
+     * @description:用于用户实现发布文章多图片处理
+     * @param userId
+     * @param files
+     * @return: com.imooc.grace.result.GraceJSONResult
+     * @author: 昴星
+     * @time: 2023/4/27 21:38
+     */
+    @PostMapping ("/uploadSomeFiles")
+    public GraceJSONResult uploadSomeFiles(@RequestParam String userId, MultipartFile[] files) throws Exception;
 }

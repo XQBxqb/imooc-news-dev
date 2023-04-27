@@ -13,7 +13,24 @@ public class AppUserVO {
     private String nickname;
     private String face;
     private Integer activeStatus;
+    private Integer myFansCounts;
+    private Integer myFollowCounts;
 
+    public Integer getMyFansCounts() {
+        return myFansCounts;
+    }
+
+    public void setMyFansCounts(Integer myFansCounts) {
+        this.myFansCounts = myFansCounts;
+    }
+
+    public Integer getMyFollowCounts() {
+        return myFollowCounts;
+    }
+
+    public void setMyFollowCounts(Integer myFollowCounts) {
+        this.myFollowCounts = myFollowCounts;
+    }
 
     public String getId() {
         return id;

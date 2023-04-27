@@ -7,6 +7,8 @@ import com.imooc.pojo.AppUser;
 import com.imooc.utils.JsonUtils;
 import com.imooc.utils.extend.RedisCommon;
 import com.imooc.utils.extend.RedisOperator;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.HandlerInterceptor;
 
@@ -20,12 +22,15 @@ import java.util.List;
  * @explain
  */
 public class UserActivityInterceptor implements HandlerInterceptor {
+    static final Logger log= LoggerFactory.getLogger(UserTokenInterceptor.class);
+
     @Autowired
-    RedisOperator redisOperator;
+    private RedisOperator redisOperator;
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         String id = request.getHeader("headerUserId");
+        String token=request.getHeader("headerUserToken");
         if(id==null) {
             GraceException.display(ResponseStatusEnum.UN_LOGIN);
             return false;

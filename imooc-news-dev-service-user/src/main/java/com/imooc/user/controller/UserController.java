@@ -1,6 +1,11 @@
 package com.imooc.user.controller;
 
 import com.imooc.utils.JsonUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ResponseBody;
 import wiremock.org.apache.commons.lang3.StringUtils;
 import com.imooc.api.BaseController;
 import com.imooc.api.controller.user.UserControllerApi;
@@ -16,8 +21,9 @@ import com.imooc.utils.extend.RedisOperator;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -26,11 +32,17 @@ import java.util.Map;
  * @explain
  */
 
-@RestController
+@ResponseBody
+@Controller
 public class UserController extends BaseController implements UserControllerApi {
     @Autowired
-    UserService userService;
+    private UserService userService;
 
+    @Autowired
+    private RedisOperator redis;
+    @Autowired
+    RedisTemplate redisTemplate;
+    static final Logger log=LoggerFactory.getLogger(UserController.class);
     @Override
     public GraceJSONResult getAccountInfo(String userId) {
         if(StringUtils.isBlank(userId)){
@@ -63,7 +75,30 @@ public class UserController extends BaseController implements UserControllerApi 
         AppUserVO userInfo=new AppUserVO();
         BeanUtils.copyProperties(appUser,userInfo);
 
+        long myFansCountLong=redis.getNum(RedisCommon.REDIS_MY_FANS_COUNT + ":" + userId);
+        long myFollowCountLong=redis.getNum(RedisCommon.REDIS_MY_FOLLOWED_COUNT+":"+userId);
+        int myFansCount=(int)myFansCountLong;
+        int myFollowCount=(int)myFollowCountLong;
+
+        userInfo.setMyFansCounts(myFansCount);
+        userInfo.setMyFollowCounts(myFollowCount);
         return GraceJSONResult.ok(userInfo);
+    }
+
+    @Override
+    public GraceJSONResult getUserListByIds(String ids) {
+        if(StringUtils.isBlank(ids)) {
+            return GraceJSONResult.errorCustom(ResponseStatusEnum.SYSTEM_OPERATION_ERROR);
+        }
+        List<String> idList = JsonUtils.jsonToList(ids, String.class);
+        List<AppUserVO> appUserVOList=new ArrayList<>();
+        for(String id:idList){
+            AppUser appUser = getUserById(id);
+            AppUserVO appUserVO=new AppUserVO();
+            BeanUtils.copyProperties(appUser,appUserVO);
+            appUserVOList.add(appUserVO);
+        }
+        return GraceJSONResult.ok(appUserVOList);
     }
 
     /**

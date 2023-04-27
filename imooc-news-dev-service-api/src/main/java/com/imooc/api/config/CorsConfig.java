@@ -28,12 +28,10 @@ public class CorsConfig {
         config.addAllowedOrigin("http://writer.imoocnews.com:9091");
         config.addAllowedOrigin("http://admin.imoocnews.com:9091");
         config.addAllowedOrigin("http://files.imoocnews.com:9091");
-        //config.addAllowedOrigin("*");
         // 设置是否发送cookie信息
         config.setAllowCredentials(true);
         // 设置允许请求的方式
         config.addAllowedMethod("*");
-        // 设置允许的header
         config.addAllowedHeader("*");
         // 2. 为url添加映射路径,/**就是拦截所有请求
         UrlBasedCorsConfigurationSource corsSource = new UrlBasedCorsConfigurationSource();

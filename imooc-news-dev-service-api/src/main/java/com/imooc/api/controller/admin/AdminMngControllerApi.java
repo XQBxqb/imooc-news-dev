@@ -48,4 +48,6 @@ public interface AdminMngControllerApi {
     public GraceJSONResult adminFaceLogin(@RequestBody AdminLoginBO adminLoginBO,
                                        HttpServletRequest request,
                                        HttpServletResponse response) ;
+
+
 }

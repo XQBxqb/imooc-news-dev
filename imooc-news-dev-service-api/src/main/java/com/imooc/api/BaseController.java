@@ -39,7 +39,7 @@ public class BaseController {
      * @author: 昴星
      * @time: 2023/3/14 18:50
      */
-    public Map<String,String> errorsMap(BindingResult bindingResult) {
+    public  Map<String,String> errorsMap(BindingResult bindingResult) {
         List<FieldError> fieldErrors = bindingResult.getFieldErrors();
         Map<String, String> map = new HashMap<>();
         for (FieldError fieldError : fieldErrors) {

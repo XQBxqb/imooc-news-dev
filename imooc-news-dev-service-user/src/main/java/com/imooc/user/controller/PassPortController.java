@@ -93,6 +93,7 @@ public class PassPortController extends BaseController implements PassPortContro
             String uToken= UUID.randomUUID().toString();
             redisOperator.set(RedisCommon.REDIS_USER_TOKEN+":"+appUser.getId(),uToken);
             redisOperator.set(RedisCommon.REDIS_USER_INFO+":"+appUser.getId(), JsonUtils.objectToJson(appUser));
+
             setCookie(CookieCommon.USER_UTOKEN,uToken,response,request,MAX_AGE);
             setCookie(CookieCommon.USER_UID,appUser.getId(),response,request,MAX_AGE);
         }

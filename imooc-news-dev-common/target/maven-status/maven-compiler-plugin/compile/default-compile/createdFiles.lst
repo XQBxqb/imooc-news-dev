@@ -22,6 +22,7 @@ com\imooc\utils\extend\RedisCommon.class
 com\imooc\utils\DesensitizationUtil.class
 org\n3r\idworker\strategy\DayPrefixRandomCodeStrategy.class
 com\imooc\utils\extend\AliyunResource.class
+com\imooc\utils\extend\RegionCommonList.class
 com\imooc\enums\PayMethod.class
 com\imooc\expection\GraceException.class
 com\imooc\utils\extend\DateUtil.class
@@ -38,10 +39,12 @@ com\imooc\utils\extend\RedisOperator.class
 org\n3r\idworker\Sid$1.class
 org\n3r\idworker\strategy\DefaultRandomCodeStrategy$1.class
 com\imooc\utils\extend\RedisOperator$1.class
+com\imooc\utils\PageUtils.class
 org\n3r\idworker\utils\IPv4Utils.class
 com\imooc\utils\extend\IPUtil.class
 org\n3r\idworker\WorkerIdStrategy.class
 org\n3r\idworker\utils\Utils.class
+com\imooc\utils\BingResultMapUtils.class
 org\n3r\idworker\DayCode.class
 org\n3r\idworker\IdWorker.class
 com\imooc\enums\Sex.class

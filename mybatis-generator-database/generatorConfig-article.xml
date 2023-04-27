@@ -20,16 +20,16 @@
         </jdbcConnection>
 
         <!-- 对应生成的pojo所在包 -->
-        <javaModelGenerator targetPackage="com.imooc.pojo" targetProject="imooc-news-dev/mybatis-generator-database/src/main/java"/>
+        <javaModelGenerator targetPackage="com.imooc.pojo" targetProject="mybatis-generator-database/src/main/java"/>
 
 		<!-- 对应生成的mapper所在目录 -->
-        <sqlMapGenerator targetPackage="mapper.article" targetProject="imooc-news-dev/mybatis-generator-database/src/main/resources"/>
+        <sqlMapGenerator targetPackage="mapper.article" targetProject="mybatis-generator-database/src/main/resources"/>
 
 		<!-- 配置mapper对应的java映射 -->
-        <javaClientGenerator targetPackage="com.imooc.article.mapper" targetProject="imooc-news-dev/mybatis-generator-database/src/main/java" type="XMLMAPPER"/>
+        <javaClientGenerator targetPackage="com.imooc.article.mapper" targetProject="mybatis-generator-database/src/main/java" type="XMLMAPPER"/>
 
         <!-- 数据库表 -->
-        <table tableName="comments"></table>
+        <table tableName="article"></table>
 
     </context>
 </generatorConfiguration>

@@ -62,24 +62,22 @@ public class UploaderServiceImpl  implements UploaderService {
     @Override
     public String uploadOOS (MultipartFile file,
                             String userId,
-                            String fileExtName) throws Exception {
+                            String fileExtName,
+                            String rootDirectory) throws Exception {
          String accessKeyId = aliyunResource.getAccessKeyId();
          String accessKeySecret = aliyunResource.getAccessKeySecret();
          String bucketName= fileResource.getBucketName();
          String endpoint=fileResource.getEndPoint();
-         String objectName= fileResource.getObjectName();
-
-         String faceDataBase=fileResource.getFaceDataBase();
-
         //创建oss实例
         OSS client =  new  OSSClientBuilder().build(endpoint,
                                                     accessKeyId,
                                                     accessKeySecret);
         InputStream inputStream=file.getInputStream();
         String fileName=sid.nextShort();
-        String fileObjectName=objectName+"/"+userId+"/" + fileName+"."+fileExtName;
+        String fileObjectName=rootDirectory+"/"+userId+"/" + fileName+"."+fileExtName;
         //开启网络流
         client.putObject(bucketName, fileObjectName, inputStream);
+        inputStream.close();
         client.shutdown();
         return fileObjectName;
     }

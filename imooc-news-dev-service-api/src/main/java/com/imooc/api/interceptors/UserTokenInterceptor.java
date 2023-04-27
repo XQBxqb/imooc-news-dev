@@ -4,6 +4,8 @@ import com.imooc.expection.GraceException;
 import com.imooc.grace.result.ResponseStatusEnum;
 import com.imooc.utils.extend.RedisCommon;
 import com.imooc.utils.extend.RedisOperator;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.HandlerInterceptor;
 import wiremock.org.apache.commons.lang3.StringUtils;
@@ -19,8 +21,10 @@ import java.io.UnsupportedEncodingException;
  */
 public class UserTokenInterceptor implements HandlerInterceptor {
 
+    final static Logger log=LoggerFactory.getLogger(UserTokenInterceptor.class);
+
     @Autowired
-    RedisOperator redisOperator;
+    private RedisOperator redisOperator;
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response,Object handler) throws Exception {
@@ -43,7 +47,8 @@ public class UserTokenInterceptor implements HandlerInterceptor {
             String redisToken = redisOperator.get(RedisCommon.REDIS_USER_TOKEN + ":" + userId);
             if(redisToken.equals(utoken)) return true;
             GraceException.display(ResponseStatusEnum.TICKET_INVALID);
-        }else GraceException.display(ResponseStatusEnum.UN_LOGIN);
+        }else
+            GraceException.display(ResponseStatusEnum.UN_LOGIN);
         return false;
     }
 }

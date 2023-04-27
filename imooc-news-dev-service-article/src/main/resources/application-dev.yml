@@ -1,0 +1,27 @@
+server:
+  port: 7001
+
+spring:
+  redis:
+    host: 192.168.98.100
+    port: 6379
+    password: 123456
+    timeout: 30s
+    jedis:
+      pool:
+        max-idle: 20
+        min-idle: 10
+        max-active: 200
+        max-wait: -1ms
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+ #設置域名，在java代碼獲得
+website:
+  domain-name: imoocnews.com
+
+pagehelper:
+  helper-dialect: mysql
+  params: count=countSql
+  reasonable: true
+  support-methods-arguments: true

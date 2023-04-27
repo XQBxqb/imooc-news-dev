@@ -26,6 +26,17 @@ public class FileResource {
     private String faceTempDataBaseObjectName;
 
     private String facePerDataBaseObjectName;
+
+    private String articleImgDataBase;
+
+    public String getArticleImgDataBase() {
+        return articleImgDataBase;
+    }
+
+    public void setArticleImgDataBase(String articleImgDataBase) {
+        this.articleImgDataBase = articleImgDataBase;
+    }
+
     public String getFaceDataBase() {
         return faceDataBase;
     }

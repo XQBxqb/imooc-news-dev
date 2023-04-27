@@ -23,12 +23,13 @@ import java.util.Enumeration;
  */
 public class AdminMngInterceptor implements HandlerInterceptor {
     @Autowired
-    RedisOperator redisOperator;
+    private RedisOperator redisOperator;
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response,Object handler) throws Exception {
         String adminUserId = request.getHeader("adminUserId");
         String adminUserToken = request.getHeader("adminUserToken");
+        System.out.println(adminUserToken+"  "+adminUserId);
         if(isTokenExit(adminUserId,adminUserToken)) return true;
         return false;
     }
@@ -46,7 +47,8 @@ public class AdminMngInterceptor implements HandlerInterceptor {
             String redisToken = redisOperator.get(RedisCommon.REDIS_ADMIN_TOKEN + ":" + adminId);
             if(redisToken.equals(adminToken)) return true;
             GraceException.display(ResponseStatusEnum.TICKET_INVALID);
-        }else GraceException.display(ResponseStatusEnum.UN_LOGIN);
+        }else
+            GraceException.display(ResponseStatusEnum.UN_LOGIN);
         return false;
     }
 }

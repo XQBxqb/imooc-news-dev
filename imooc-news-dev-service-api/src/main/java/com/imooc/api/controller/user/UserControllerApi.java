@@ -7,6 +7,8 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 /**
@@ -34,4 +36,7 @@ public interface UserControllerApi {
     @PostMapping("/getUserInfo")
     @ApiOperation(value="获取用户基本信息",notes="获取用户基本信息",httpMethod = "POST")
     public GraceJSONResult getUserInfo(@RequestParam String userId);
+    @GetMapping ("/getUserListByIds")
+    @ApiOperation(value="用于文章服务内部调用",notes="用于文章服务内部调用",httpMethod = "GET")
+    public GraceJSONResult getUserListByIds(@RequestParam String ids);
 }

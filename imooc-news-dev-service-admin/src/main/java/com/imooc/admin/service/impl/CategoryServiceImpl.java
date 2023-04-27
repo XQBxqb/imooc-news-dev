@@ -3,6 +3,8 @@ package com.imooc.admin.service.impl;
 import com.imooc.admin.mapper.CategoryMapper;
 import com.imooc.admin.service.CategoryService;
 import com.imooc.pojo.Category;
+import com.imooc.utils.extend.RedisCommon;
+import com.imooc.utils.extend.RedisOperator;
 import org.checkerframework.checker.units.qual.A;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,18 +24,22 @@ public class CategoryServiceImpl implements CategoryService {
     @Autowired
     private CategoryMapper mapper;
 
+    @Autowired
+    private RedisOperator redis;
     @Override
     public boolean insertOne(Category category) {
         int result = mapper.insert(category);
-        if(result==1) return true;
-        return false;
+        if(result!=1) return false;
+        redis.del(RedisCommon.REDIS_ALL_CATEGROY);
+        return true;
     }
 
     @Override
     public boolean updateOne(Category category) {
         int result = mapper.updateByPrimaryKey(category);
-        if(result==1) return true;
-        return false;
+        if(result!=1) return false;
+        redis.del(RedisCommon.REDIS_ALL_CATEGROY);
+        return true;
     }
 
     @Override

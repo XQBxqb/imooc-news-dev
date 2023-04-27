@@ -1,14 +1,13 @@
-
-import org.junit.jupiter.api.Test;
-
 import java.io.File;
-import java.io.IOException;
-
 /**
  * @author 昴星
- * @date 2023-03-28 19:59
+ * @date 2023-04-30 12:38
  * @explain
  */
 public class test {
 
+    public static void main(String[] args) {
+        File test = new File("test");
+        test.mkdir();
+    }
 }

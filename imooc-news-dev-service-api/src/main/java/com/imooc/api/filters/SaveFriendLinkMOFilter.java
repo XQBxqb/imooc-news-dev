@@ -3,6 +3,8 @@ package com.imooc.api.filters;
 
 import com.imooc.api.wapper.FriendLinkMngSaveMOWrapper;
 import com.imooc.utils.extend.DateUtil;
+
+import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.*;
@@ -16,7 +18,6 @@ import java.io.IOException;
  * @date 2023-04-11 21:08
  * @explain 配置过滤器，可以让拦截器处理后能够取到 RequestBody参数值
  */
-@Component
 @WebFilter(urlPatterns = "/friendLinkMng/saveOrUpdateFriendLink")
 public class SaveFriendLinkMOFilter implements Filter {
 
@@ -28,7 +29,6 @@ public class SaveFriendLinkMOFilter implements Filter {
     public void doFilter(ServletRequest servletRequest,
                          ServletResponse servletResponse,
                          FilterChain filterChain) throws IOException, ServletException {
-        System.out.println(DateUtil.getCurrentDateString());
         ServletRequest requestwapper=null;
         if(servletRequest instanceof HttpServletRequest){
             requestwapper=new FriendLinkMngSaveMOWrapper((HttpServletRequest)servletRequest);

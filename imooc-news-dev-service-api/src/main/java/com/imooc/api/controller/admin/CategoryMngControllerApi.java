@@ -6,6 +6,7 @@ import com.imooc.pojo.bo.CategoryBO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
  * @explain
  */
 
-@Api(value="admin登录的controller",tags="admin登录")
+@Api(value="category相关的服务",tags="category相关的服务")
 @RequestMapping("categoryMng")
 public interface CategoryMngControllerApi {
     @ApiOperation(value = "获得category",notes="获得category",httpMethod = "POST")
@@ -29,4 +30,8 @@ public interface CategoryMngControllerApi {
     @ApiOperation(value = "保存或者更新category",notes="保存或者更新category",httpMethod = "POST")
     @PostMapping("/saveOrUpdateCategory")
     public GraceJSONResult saveOrUpdateCategory (@RequestBody CategoryBO categoryBO, BindingResult bindingResult) ;
+
+    @ApiOperation(value = "获取所有category",notes="获取所有category",httpMethod = "GET")
+    @GetMapping("/getCats")
+    public GraceJSONResult getCats () ;
 }

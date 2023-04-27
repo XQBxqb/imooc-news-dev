@@ -18,4 +18,11 @@ public class RedisCommon {
 
     public static final String REDIS_ADMIN_INFO="redis_admin_info";
 
+    public static final String REDIS_ALL_CATEGROY="redis_all_categroy";
+    public static final String REDIS_ALL_FRIENDLINK="redis_all_friendLink";
+
+    public static final String REDIS_NOT_DELETE_FRIENDLINK="redis_not_delete_friendLink";
+    public static final String REDIS_MY_FOLLOWED_COUNT="redis_my_followed_count";
+    public static final String REDIS_MY_FANS_COUNT="redis_my_fans_count";
+
 }

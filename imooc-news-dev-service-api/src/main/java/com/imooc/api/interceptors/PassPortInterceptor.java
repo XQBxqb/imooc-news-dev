@@ -7,6 +7,7 @@ import com.imooc.utils.extend.IPUtil;
 import com.imooc.utils.extend.RedisOperator;
 import com.imooc.utils.extend.RedisCommon;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -19,7 +20,9 @@ import javax.servlet.http.HttpServletResponse;
  * @explain：实现登录的拦截器
  * 一般api层和业务的实现层分开，实现层就是单纯地实现业务，而一些可以分离业务的，比如说拦截器，可以写在api层，这样能够降低业务层的复杂性，业务层的功能越单纯，维护的成本也越低
  */
+
 public class PassPortInterceptor implements HandlerInterceptor {
+
     @Autowired
     private RedisOperator redisOperator;
 

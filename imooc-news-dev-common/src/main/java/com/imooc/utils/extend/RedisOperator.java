@@ -96,7 +96,9 @@ public class RedisOperator {
       return result;
    }
 
-
+   public Long getNum(String key){
+      return redisTemplate.opsForValue().increment(key,0);
+   }
    // Hash（哈希表）
 
    /**
