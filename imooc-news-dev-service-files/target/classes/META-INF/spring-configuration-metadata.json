@@ -1,0 +1,52 @@
+{
+  "groups": [
+    {
+      "name": "file",
+      "type": "com.imooc.files.FileResource",
+      "sourceType": "com.imooc.files.FileResource"
+    }
+  ],
+  "properties": [
+    {
+      "name": "file.bucket-name",
+      "type": "java.lang.String",
+      "sourceType": "com.imooc.files.FileResource"
+    },
+    {
+      "name": "file.end-point",
+      "type": "java.lang.String",
+      "sourceType": "com.imooc.files.FileResource"
+    },
+    {
+      "name": "file.face-data-base",
+      "type": "java.lang.String",
+      "sourceType": "com.imooc.files.FileResource"
+    },
+    {
+      "name": "file.face-per-data-base-object-name",
+      "type": "java.lang.String",
+      "sourceType": "com.imooc.files.FileResource"
+    },
+    {
+      "name": "file.face-temp-data-base-object-name",
+      "type": "java.lang.String",
+      "sourceType": "com.imooc.files.FileResource"
+    },
+    {
+      "name": "file.host",
+      "type": "java.lang.String",
+      "sourceType": "com.imooc.files.FileResource"
+    },
+    {
+      "name": "file.object-name",
+      "type": "java.lang.String",
+      "sourceType": "com.imooc.files.FileResource"
+    },
+    {
+      "name": "file.oss-host",
+      "type": "java.lang.String",
+      "sourceType": "com.imooc.files.FileResource"
+    }
+  ],
+  "hints": []
+}

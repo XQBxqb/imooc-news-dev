@@ -1,0 +1,32 @@
+{
+  "groups": [
+    {
+      "name": "aliyun",
+      "type": "com.imooc.utils.extend.AliyunResource",
+      "sourceType": "com.imooc.utils.extend.AliyunResource"
+    }
+  ],
+  "properties": [
+    {
+      "name": "aliyun.access-key-id",
+      "type": "java.lang.String",
+      "sourceType": "com.imooc.utils.extend.AliyunResource"
+    },
+    {
+      "name": "aliyun.access-key-secret",
+      "type": "java.lang.String",
+      "sourceType": "com.imooc.utils.extend.AliyunResource"
+    },
+    {
+      "name": "aliyun.confidence-level",
+      "type": "java.lang.Integer",
+      "sourceType": "com.imooc.utils.extend.AliyunResource"
+    },
+    {
+      "name": "aliyun.quality-score-threshold",
+      "type": "java.lang.String",
+      "sourceType": "com.imooc.utils.extend.AliyunResource"
+    }
+  ],
+  "hints": []
+}

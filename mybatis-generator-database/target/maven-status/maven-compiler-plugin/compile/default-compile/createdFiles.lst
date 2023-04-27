@@ -1,0 +1,6 @@
+com\imooc\my\mapper\MyMapper.class
+com\imooc\mybatis\utils\AdminGenerator.class
+com\imooc\mybatis\utils\tet.class
+com\imooc\mybatis\utils\UserGenerator.class
+com\imooc\mybatis\utils\ArticleGenerator.class
+com\imooc\admin\Application.class
