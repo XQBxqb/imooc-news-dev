@@ -92,6 +92,28 @@ public class Article {
      */
     private String content;
 
+    @Override
+    public String toString() {
+        return "Article{" +
+                "id='" + id + '\'' +
+                ", title='" + title + '\'' +
+                ", categoryId=" + categoryId +
+                ", articleType=" + articleType +
+                ", articleCover='" + articleCover + '\'' +
+                ", isAppoint=" + isAppoint +
+                ", articleStatus=" + articleStatus +
+                ", publishUserId='" + publishUserId + '\'' +
+                ", publishTime=" + publishTime +
+                ", readCounts=" + readCounts +
+                ", commentCounts=" + commentCounts +
+                ", mongoFileId='" + mongoFileId + '\'' +
+                ", isDelete=" + isDelete +
+                ", createTime=" + createTime +
+                ", updateTime=" + updateTime +
+                ", content='" + content + '\'' +
+                '}';
+    }
+
     /**
      * @return id
      */

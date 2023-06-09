@@ -1,0 +1,8 @@
+
+server:
+  port: 7002
+
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+

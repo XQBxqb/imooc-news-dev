@@ -1,7 +1,7 @@
 package com.imooc.api;
 
 import com.imooc.utils.extend.CookieCommon;
-import com.imooc.utils.extend.RedisOperator;
+import com.imooc.api.config.RedisOperator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.validation.BindingResult;

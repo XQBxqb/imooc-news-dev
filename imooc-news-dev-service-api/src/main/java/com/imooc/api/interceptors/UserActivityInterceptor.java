@@ -6,7 +6,7 @@ import com.imooc.grace.result.ResponseStatusEnum;
 import com.imooc.pojo.AppUser;
 import com.imooc.utils.JsonUtils;
 import com.imooc.utils.extend.RedisCommon;
-import com.imooc.utils.extend.RedisOperator;
+import com.imooc.api.config.RedisOperator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +14,6 @@ import org.springframework.web.servlet.HandlerInterceptor;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.List;
 
 /**
  * @author 昴星

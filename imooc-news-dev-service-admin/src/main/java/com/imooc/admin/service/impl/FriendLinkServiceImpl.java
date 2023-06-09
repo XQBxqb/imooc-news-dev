@@ -5,13 +5,10 @@ import com.imooc.admin.service.FriendLinkService;
 import com.imooc.enums.YesOrNo;
 import com.imooc.pojo.mo.FriendLinkMO;
 import com.imooc.utils.extend.RedisCommon;
-import com.imooc.utils.extend.RedisOperator;
+import com.imooc.api.config.RedisOperator;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Example;
-import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.stereotype.Service;
 
-import java.lang.reflect.Field;
 import java.util.List;
 
 /**

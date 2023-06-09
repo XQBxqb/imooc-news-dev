@@ -1,0 +1,17 @@
+server:
+  port: ${port1:8001}
+  tomcat:
+    uri-encoding: UTF-8
+    max-swallow-size: -1
+spring:
+  application:
+    name: springcloud-eureka
+
+eureka:
+  instance:
+    hostname: eureka-cluster-${server.port}
+  other-node-port2: ${port2:8002}
+  other-node-port3: ${port3:8003}
+  client:
+    service-url:
+      defaultZone: http://eureka-cluster-${eureka.other-node-port2}:${eureka.other-node-port2}/eureka/,http://eureka-cluster-${eureka.other-node-port3}:${eureka.other-node-port3}/eureka/

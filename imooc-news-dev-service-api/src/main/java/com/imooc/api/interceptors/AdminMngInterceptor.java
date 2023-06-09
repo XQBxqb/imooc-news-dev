@@ -1,12 +1,9 @@
 package com.imooc.api.interceptors;
 
-import com.imooc.api.aspect.ServiceLogAspect;
 import com.imooc.expection.GraceException;
 import com.imooc.grace.result.ResponseStatusEnum;
 import com.imooc.utils.extend.RedisCommon;
-import com.imooc.utils.extend.RedisOperator;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import com.imooc.api.config.RedisOperator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.HandlerInterceptor;
 import wiremock.org.apache.commons.lang3.StringUtils;
@@ -14,7 +11,6 @@ import wiremock.org.apache.commons.lang3.StringUtils;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.UnsupportedEncodingException;
-import java.util.Enumeration;
 
 /**
  * @author 昴星

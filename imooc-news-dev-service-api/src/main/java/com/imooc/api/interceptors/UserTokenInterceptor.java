@@ -3,7 +3,7 @@ package com.imooc.api.interceptors;
 import com.imooc.expection.GraceException;
 import com.imooc.grace.result.ResponseStatusEnum;
 import com.imooc.utils.extend.RedisCommon;
-import com.imooc.utils.extend.RedisOperator;
+import com.imooc.api.config.RedisOperator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

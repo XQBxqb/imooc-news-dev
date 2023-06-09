@@ -1,6 +1,7 @@
 package com.imooc.article.service;
 
 import com.imooc.pojo.Article;
+import com.imooc.pojo.vo.ArticleDetailVO;
 import com.imooc.pojo.vo.IndexArticleVO;
 import com.imooc.utils.PagedGridResult;
 
@@ -17,4 +18,10 @@ public interface ArticleProtalService {
     public List<Article>  queryHostArticle();
 
     public List<Article> queryArticleByWriterId(String writerId, Integer page, Integer pageSize);
+
+    public ArticleDetailVO queryArticleDetail(String articleId);
+
+    public PagedGridResult queryGoodArticleOfWriter(String writerId);
+
+
 }

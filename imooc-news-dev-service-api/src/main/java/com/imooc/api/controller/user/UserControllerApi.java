@@ -2,8 +2,10 @@ package com.imooc.api.controller.user;
 
 import com.imooc.grace.result.GraceJSONResult;
 import com.imooc.pojo.bo.UpdateUserInfoBO;
+import com.imooc.utils.extend.ServiceList;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,6 +23,7 @@ import javax.validation.Valid;
 //@RequestMapping("/passport")
 @RequestMapping("user")
 @Api(value = "用户相关信息",tags = {"用户相关信息的controller"})
+@FeignClient(value = ServiceList.SERVICE_USER)
 public interface UserControllerApi {
 
     @PostMapping ("/getAccountInfo")
@@ -30,8 +33,7 @@ public interface UserControllerApi {
     @PostMapping("/updateUserInfo")
     @ApiOperation(value="更新/修改用户信息",notes="更新/修改用户信息接口",httpMethod = "POST")
     public GraceJSONResult updateUserInfo(
-            @RequestBody @Valid UpdateUserInfoBO updateUserInfoBO,
-            BindingResult bindingResult);
+            @RequestBody @Valid UpdateUserInfoBO updateUserInfoBO);
 
     @PostMapping("/getUserInfo")
     @ApiOperation(value="获取用户基本信息",notes="获取用户基本信息",httpMethod = "POST")

@@ -1,10 +1,9 @@
 package com.imooc.admin.controller;
 
-import com.aliyun.dysmsapi20170525.models.DeleteSmsTemplateRequest;
 import com.imooc.admin.service.AdminService;
 import com.imooc.api.BaseController;
+import com.imooc.api.config.RedisOperator;
 import com.imooc.api.controller.admin.AdminMngControllerApi;
-import com.imooc.enums.FaceVerifyType;
 import com.imooc.grace.result.GraceJSONResult;
 import com.imooc.grace.result.ResponseStatusEnum;
 import com.imooc.pojo.AdminUser;
@@ -12,16 +11,11 @@ import com.imooc.pojo.bo.AdminLoginBO;
 import com.imooc.pojo.bo.NewAdminBO;
 import com.imooc.utils.PagedGridResult;
 import com.imooc.utils.extend.*;
-import org.apache.ibatis.logging.stdout.StdOutImpl;
-import org.apache.logging.log4j.message.ReusableMessage;
-import org.checkerframework.checker.units.qual.A;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCrypt;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 import wiremock.org.apache.commons.lang3.StringUtils;
@@ -30,8 +24,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
-import java.util.Enumeration;
-import java.util.Map;
 import java.util.UUID;
 
 /**

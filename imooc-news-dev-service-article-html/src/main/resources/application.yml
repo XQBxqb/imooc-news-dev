@@ -1,0 +1,33 @@
+server:
+  tomcat:
+    uri-encoding: UTF-8
+    max-swallow-size: -1
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: service-article-html
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  data:
+    mongodb:
+      database: imooc-news
+      uri: mongodb://root:ab215687DA.@192.168.98.103:27017
+  freemarker:
+    suffix: .ftl
+    charset: utf-8
+    content-type: text/html
+    template-loader-path: classpath:/templates/
+
+  rabbitmq:
+    host: 192.168.98.105
+    port: 5672
+    username: root
+    password: ab215687DA.
+    virtual-host: imooc-news-dev
+
+freemarker:
+  html:
+    article: \D:\apache-tomcat-8.5\apache-tomcat-8.5.87\webapps\imooc-news\portal\a

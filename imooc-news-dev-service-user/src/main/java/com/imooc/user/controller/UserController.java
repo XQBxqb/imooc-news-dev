@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import wiremock.org.apache.commons.lang3.StringUtils;
 import com.imooc.api.BaseController;
@@ -17,7 +18,7 @@ import com.imooc.pojo.bo.UpdateUserInfoBO;
 import com.imooc.pojo.vo.UserAccountInfoVO;
 import com.imooc.user.service.UserService;
 import com.imooc.utils.extend.RedisCommon;
-import com.imooc.utils.extend.RedisOperator;
+import com.imooc.api.config.RedisOperator;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
@@ -37,7 +38,6 @@ import java.util.Map;
 public class UserController extends BaseController implements UserControllerApi {
     @Autowired
     private UserService userService;
-
     @Autowired
     private RedisOperator redis;
     @Autowired
@@ -55,14 +55,8 @@ public class UserController extends BaseController implements UserControllerApi 
     }
 
     @Override
-    public GraceJSONResult updateUserInfo(UpdateUserInfoBO updateUserInfoBO, BindingResult bindingResult) {
-        //校验BO
-        if(bindingResult.hasErrors()){
-            Map<String, String> errorMap = errorsMap(bindingResult);
-            return GraceJSONResult.errorMap(errorMap);
-        }
+    public GraceJSONResult updateUserInfo(UpdateUserInfoBO updateUserInfoBO) {
         userService.updateUserInfo(updateUserInfoBO);
-
         return GraceJSONResult.ok();
     }
 
@@ -119,4 +113,5 @@ public class UserController extends BaseController implements UserControllerApi 
         redisOperator.set(RedisCommon.REDIS_USER_INFO+":"+userId,JsonUtils.objectToJson(appUser));
         return appUser;
     }
+
 }

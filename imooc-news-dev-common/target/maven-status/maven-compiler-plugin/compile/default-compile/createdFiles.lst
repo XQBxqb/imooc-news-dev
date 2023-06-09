@@ -35,10 +35,9 @@ com\imooc\utils\extend\SMSUtils.class
 com\imooc\utils\FileUtils.class
 com\imooc\expection\MyException.class
 com\imooc\grace\result\GraceJSONResult.class
-com\imooc\utils\extend\RedisOperator.class
+com\imooc\utils\extend\ServiceList.class
 org\n3r\idworker\Sid$1.class
 org\n3r\idworker\strategy\DefaultRandomCodeStrategy$1.class
-com\imooc\utils\extend\RedisOperator$1.class
 com\imooc\utils\PageUtils.class
 org\n3r\idworker\utils\IPv4Utils.class
 com\imooc\utils\extend\IPUtil.class

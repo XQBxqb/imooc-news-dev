@@ -2,6 +2,7 @@ server:
   tomcat:
     uri-encoding: UTF-8
     max-swallow-size: -1
+  port: ${port:7003}
 spring:
   profiles:
     active: dev
@@ -18,8 +19,8 @@ spring:
     password: 123
   data:
     mongodb:
-      uri: mongodb://root:root@192.168.98.103:27017
       database: imooc-news
+      uri: mongodb://root:ab215687DA.@192.168.98.103:27017
 #    database: 0 # Redis数据库索引（默认为0）
 #    port: 6379
 #    password: 123456
@@ -28,3 +29,22 @@ spring:
 #      jedis:
 #        pool:
 #          max-idle:
+
+eureka:
+  server:
+    hostname: myEureka
+    port: 7000
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka-cluster-8001:8001/eureka/,http://eureka-cluster-8002:8002/eureka/,http://eureka-cluster-8003:8003/eureka/
+logging:
+  level:
+    com.imooc.api.controller.user.UserControllerApi: debug
+
+feign:
+  client:
+    config:
+      SERVICE-USER:
+        logger-level: FULL

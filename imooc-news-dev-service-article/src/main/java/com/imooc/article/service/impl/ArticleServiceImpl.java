@@ -2,7 +2,7 @@ package com.imooc.article.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.imooc.article.mapper.ArticleCustomMapper;
+import com.imooc.article.mapper.ArticleCustomeMapper;
 import com.imooc.article.mapper.ArticleMapper;
 import com.imooc.article.service.ArticleService;
 import tk.mybatis.mapper.entity.Example;
@@ -10,7 +10,6 @@ import com.imooc.enums.ArticleReviewStatus;
 import com.imooc.enums.YesOrNo;
 import com.imooc.pojo.Article;
 import com.imooc.pojo.bo.NewArticleBO;
-import com.imooc.utils.JsonUtils;
 import com.imooc.utils.PagedGridResult;
 import org.n3r.idworker.Sid;
 import org.springframework.beans.BeanUtils;
@@ -19,8 +18,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import wiremock.org.apache.commons.lang3.StringUtils;
 
-import java.beans.Transient;
-import java.util.Date;
+import java.util.Date;;
 import java.util.List;
 
 /**
@@ -37,7 +35,7 @@ public class ArticleServiceImpl implements ArticleService {
     private ArticleMapper mapper;
 
     @Autowired
-    private ArticleCustomMapper customMapper;
+    private ArticleCustomeMapper customMapper;
 
     @Autowired
     private ArticleMapper articleMapper;
@@ -68,6 +66,15 @@ public class ArticleServiceImpl implements ArticleService {
     @Override
     public void updateAppointToPublic() {
         customMapper.updateAppointToPublic();
+    }
+
+    @Override
+    @Transactional
+    public void updateArticleStatus(String articleID, Integer articleStatus) {
+        Article article = new Article();
+        article.setId(articleID);
+        article.setArticleStatus(articleStatus);
+        articleMapper.updateByPrimaryKeySelective(article);
     }
 
     @Override
@@ -106,6 +113,25 @@ public class ArticleServiceImpl implements ArticleService {
         PageHelper.startPage(page, pageSize);
         List<Article> list = articleMapper.selectByExample(articleExample);
         return setterPagedGrid(list, page);
+    }
+
+    @Override
+    public PagedGridResult queryArticleListAdmin(Integer status, Integer page, Integer pageSize) {
+        Example articleExample=new Example(Article.class);
+        Example.Criteria criteria = articleExample.createCriteria();
+        articleExample.orderBy("createTime").desc();
+
+        if(ArticleReviewStatus.isArticleStatusValid(status)){
+            criteria.andEqualTo("articleStatus",status);
+        }
+        if(status!=null && status==12){
+            criteria.andEqualTo("articleStatus",ArticleReviewStatus.REVIEWING)
+                    .orEqualTo("articleStatus",ArticleReviewStatus.WAITING_MANUAL);
+        }
+        criteria.andEqualTo("isDelete",YesOrNo.NO);
+        PageHelper.startPage(page,pageSize);
+        List<Article> articleList = articleMapper.selectByExample(articleExample);
+        return setterPagedGrid(articleList,page);
     }
 
     public PagedGridResult setterPagedGrid(List<?> list,

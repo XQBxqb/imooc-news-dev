@@ -4,12 +4,14 @@ import com.imooc.api.controller.user.MyfansControllerApi;
 import com.imooc.enums.Sex;
 import com.imooc.grace.result.GraceJSONResult;
 import com.imooc.grace.result.ResponseStatusEnum;
+import com.imooc.pojo.bo.UpdateUserInfoBO;
 import com.imooc.pojo.vo.FansCountsVO;
 import com.imooc.pojo.vo.RegionRatioVO;
 import com.imooc.user.service.FanService;
 import com.imooc.utils.PagedGridResult;
 import com.imooc.utils.extend.PageCommon;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import wiremock.org.apache.commons.lang3.StringUtils;
 
@@ -78,4 +80,5 @@ public class MyFansController implements MyfansControllerApi {
         List<RegionRatioVO> regionRatioVOS = fanService.queryRegionRatioList(writerId);
         return GraceJSONResult.ok(regionRatioVOS);
     }
+
 }

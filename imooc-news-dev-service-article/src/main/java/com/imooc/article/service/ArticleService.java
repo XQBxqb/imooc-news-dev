@@ -17,10 +17,14 @@ public interface ArticleService {
 
     public void  updateAppointToPublic();
 
+    void updateArticleStatus(String articleID,Integer articleStatus);
+
     public PagedGridResult getArticleListByCondition(String userId,
                                                      String keyword,
                                                      Integer status,
                                                      Date startDate,
                                                      Date endDate, Integer page, Integer pageSize);
+
+    public PagedGridResult queryArticleListAdmin(Integer status,Integer page,Integer pageSize);
 
 }

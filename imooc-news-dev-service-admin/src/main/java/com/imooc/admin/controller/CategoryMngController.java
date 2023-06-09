@@ -1,6 +1,5 @@
 package com.imooc.admin.controller;
 import com.aliyun.core.utils.StringUtils;
-import com.imooc.admin.mapper.CategoryMapper;
 import com.imooc.admin.service.CategoryService;
 import com.imooc.api.BaseController;
 import com.imooc.api.controller.admin.CategoryMngControllerApi;
@@ -9,9 +8,7 @@ import com.imooc.pojo.Category;
 import com.imooc.pojo.bo.CategoryBO;
 import com.imooc.utils.JsonUtils;
 import com.imooc.utils.extend.RedisCommon;
-import com.imooc.utils.extend.RedisOperator;
-import org.checkerframework.checker.units.qual.C;
-import org.n3r.idworker.Sid;
+import com.imooc.api.config.RedisOperator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;

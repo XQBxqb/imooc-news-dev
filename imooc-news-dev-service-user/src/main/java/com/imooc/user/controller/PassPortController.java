@@ -2,6 +2,7 @@ package com.imooc.user.controller;
 
 import com.aliyun.core.utils.StringUtils;
 import com.imooc.api.BaseController;
+import com.imooc.api.config.RedisOperator;
 import com.imooc.api.controller.user.PassPortControllerApi;
 import com.imooc.enums.UserStatus;
 import com.imooc.grace.result.GraceJSONResult;

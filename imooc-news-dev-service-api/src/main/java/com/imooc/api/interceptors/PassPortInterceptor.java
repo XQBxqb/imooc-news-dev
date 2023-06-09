@@ -4,10 +4,9 @@ package com.imooc.api.interceptors;
 import com.imooc.expection.GraceException;
 import com.imooc.grace.result.ResponseStatusEnum;
 import com.imooc.utils.extend.IPUtil;
-import com.imooc.utils.extend.RedisOperator;
+import com.imooc.api.config.RedisOperator;
 import com.imooc.utils.extend.RedisCommon;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 

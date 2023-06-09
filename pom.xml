@@ -15,6 +15,8 @@
         <module>imooc-news-dev-service-files</module>
         <module>imooc-news-dev-service-admin</module>
         <module>imooc-news-dev-service-article</module>
+        <module>imooc-news-dev-service-article-html</module>
+        <module>springcloud-eureka</module>
     </modules>
     <!--user.imoocnews.com:7003
         files.imoocnews.com:7004
@@ -53,7 +55,7 @@
         <springfox-swagger2.version>2.4.0</springfox-swagger2.version>
         <swagger-bootstrap-ui.version>1.6</swagger-bootstrap-ui.version>
         <fastdfs.version>1.27.2</fastdfs.version>
-
+        <springframework-freemarker.version>2.2.5.RELEASE</springframework-freemarker.version>
         <slf4j.version>1.7.21</slf4j.version>
         <joda-time.version>2.10.6</joda-time.version>
     </properties>
@@ -184,6 +186,12 @@
                 <groupId>joda-time</groupId>
                 <artifactId>joda-time</artifactId>
                 <version>${joda-time.version}</version>
+            </dependency>
+            <!-- freemaker 配置 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-freemarker</artifactId>
+                <version>${springframework-freemarker.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

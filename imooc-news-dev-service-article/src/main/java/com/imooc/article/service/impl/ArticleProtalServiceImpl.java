@@ -7,7 +7,9 @@ import com.imooc.article.service.ArticleProtalService;
 import com.imooc.enums.ArticleReviewStatus;
 import com.imooc.enums.YesOrNo;
 import com.imooc.pojo.Article;
+import com.imooc.pojo.vo.ArticleDetailVO;
 import com.imooc.utils.PagedGridResult;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tk.mybatis.mapper.entity.Example;
@@ -74,16 +76,7 @@ public class ArticleProtalServiceImpl implements ArticleProtalService {
 
 
 
-    public PagedGridResult setterPagedGrid(List<?> list,
-                                           Integer page) {
-        PageInfo<?> pageList = new PageInfo<>(list);
-        PagedGridResult gridResult = new PagedGridResult();
-        gridResult.setRows(list);
-        gridResult.setPage(page);
-        gridResult.setRecords(pageList.getTotal());
-        gridResult.setTotal(pageList.getPages());
-        return gridResult;
-    }
+
 
     @Override
     public List<Article> queryArticleByWriterId(String writerId, Integer page, Integer pageSize) {
@@ -100,4 +93,52 @@ public class ArticleProtalServiceImpl implements ArticleProtalService {
         List<Article> articles = articleMapper.selectByExample(articleExample);
         return articles;
     }
+
+    @Override
+    public ArticleDetailVO queryArticleDetail(String articleId) {
+
+        Article article = new Article();
+        article.setIsDelete(YesOrNo.NO.type);
+        article.setIsAppoint(YesOrNo.NO.type);
+        article.setArticleStatus(ArticleReviewStatus.SUCCESS.type);
+        article.setId(articleId);
+
+        Article select = articleMapper.selectOne(article);
+
+        ArticleDetailVO articleDetailVO = new ArticleDetailVO();
+
+        BeanUtils.copyProperties(select,articleDetailVO);
+
+        articleDetailVO.setCover(select.getArticleCover());
+        return articleDetailVO;
+    }
+
+    @Override
+    public PagedGridResult queryGoodArticleOfWriter(String writerId) {
+        Example articleExample = new Example(Article.class);
+        articleExample.orderBy("publishTime").desc();
+
+        Example.Criteria criteria = articleExample.createCriteria();
+        criteria.andEqualTo("isAppoint", YesOrNo.NO.type);
+        criteria.andEqualTo("isDelete", YesOrNo.NO.type);
+        criteria.andEqualTo("articleStatus", ArticleReviewStatus.SUCCESS.type);
+        criteria.andEqualTo("publishUserId",writerId);
+        PageHelper.startPage(1, 5);
+
+        List<Article> articles = articleMapper.selectByExample(articleExample);
+        return setterPagedGrid(articles,1);
+    }
+
+    private PagedGridResult setterPagedGrid(List<?> list,
+                                            Integer page) {
+        PageInfo<?> pageList = new PageInfo<>(list);
+        PagedGridResult gridResult = new PagedGridResult();
+        gridResult.setRows(list);
+        gridResult.setPage(page);
+        gridResult.setRecords(pageList.getTotal());
+        gridResult.setTotal(pageList.getPages());
+        return gridResult;
+    }
 }
+
+

@@ -31,6 +31,9 @@ public class InterceptorConfigInterceptor implements WebMvcConfigurer {
     @Bean
     public FriendLinkVerifyUpdateInfo friendLinkVerifyUpdateInfo(){return new FriendLinkVerifyUpdateInfo();}
 
+    @Bean
+    public ArticleIsReadInterceptor articleIsReadInterceptor(){return new ArticleIsReadInterceptor();}
+
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
@@ -40,8 +43,8 @@ public class InterceptorConfigInterceptor implements WebMvcConfigurer {
 
         registry.addInterceptor(userInterceptor())
                 .addPathPatterns("/user/getAccountInfo")
-                .addPathPatterns("/user/updateUserInfo")
-                .addPathPatterns("/user/getUserInfo");
+                .addPathPatterns("/user/updateUserInfo");
+                //.addPathPatterns("/user/getUserInfo");
 
         registry.addInterceptor(adminTokenInterceptor())
                 .addPathPatterns("/adminMng/adminIsExist")
@@ -55,5 +58,8 @@ public class InterceptorConfigInterceptor implements WebMvcConfigurer {
 
         registry.addInterceptor(friendLinkVerifyUpdateInfo())
                 .addPathPatterns("/friendLinkMng/saveOrUpdateFriendLink");
+
+        registry.addInterceptor(articleIsReadInterceptor())
+                .addPathPatterns("/portal/article/readArticle");
     }
 }

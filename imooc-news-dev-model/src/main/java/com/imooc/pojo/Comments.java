@@ -50,6 +50,17 @@ public class Comments {
     @Column(name = "comment_user_nickname")
     private String commentUserNickname;
 
+    @Column(name = "comment_user_face")
+    private String commentUserFace;
+
+    public String getCommentUserFace() {
+        return commentUserFace;
+    }
+
+    public void setCommentUserFace(String commentUserFace) {
+        this.commentUserFace = commentUserFace;
+    }
+
     /**
      * 留言内容
      */

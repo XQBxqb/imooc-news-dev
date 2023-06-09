@@ -12,8 +12,8 @@ spring:
     time-zone: GMT+8
   data:
     mongodb:
-      uri: mongodb://root:root@192.168.98.103:27017
       database: imooc-news
+      uri: mongodb://root:ab215687DA.@192.168.98.103:27017
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: com.mysql.jdbc.Driver

@@ -1,5 +1,6 @@
 package com.imooc.api.config;
 
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.client.OkHttp3ClientHttpRequestFactory;
@@ -9,11 +10,6 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 
 
-/*
- * @description:跨域问题的配置类
- * @author: 昴星
- * @time: 2023/3/11 13:58
- */
 @Configuration
 public class CloudConfig {
 
@@ -21,7 +17,8 @@ public class CloudConfig {
     }
 
     @Bean
-   public RestTemplate restTemplate(){
+    @LoadBalanced
+    public RestTemplate restTemplate(){
         return new RestTemplate(new OkHttp3ClientHttpRequestFactory());
     }
 

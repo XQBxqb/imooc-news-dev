@@ -2,6 +2,7 @@ server:
   tomcat:
     uri-encoding: UTF-8
     max-swallow-size: -1
+  port: 7001
 spring:
   profiles:
     active: dev
@@ -12,8 +13,8 @@ spring:
     time-zone: GMT+8
   data:
     mongodb:
-      uri: mongodb://root:root@192.168.98.103:27017
       database: imooc-news
+      uri: mongodb://root:ab215687DA.@192.168.98.103:27017
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: com.mysql.jdbc.Driver
@@ -28,6 +29,24 @@ spring:
       idle-timeout: 600000            # 连接超时的最大时长（毫秒），超时则被释放（retired），默认:10分钟
       pool-name: DateSourceHikariCP     # 连接池名字
       max-lifetime: 1800000           # 连接的生命时长（毫秒），超时而且没被使用则被释放（retired），默认:30分钟 1800000ms
+  freemarker:
+    suffix: .ftl
+    charset: utf-8
+    content-type: text/html
+    template-loader-path: classpath:/templates/
+
+  rabbitmq:
+    host: 192.168.98.105
+    port: 5672
+    username: root
+    password: ab215687DA.
+    virtual-host: imooc-news-dev
+ribbon:
+  ConnectTimeout: 5000
+  ReadTimeout: 5000
+  MaxAutoRetries: 1
+  MaxAutoRetriesNextServer: 2
+
 mybatis:
   type-aliases-package: com.imooc.pojo
   mapper-locations: classpath:/mapper/*.xml
@@ -39,3 +58,21 @@ mybatis:
 #      jedis:
 #        pool:
 #          max-idle:
+freemarker:
+  html:
+    article: \D:\apache-tomcat-8.5\apache-tomcat-8.5.87\webapps\imooc-news\portal\a
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka-cluster-8001:8001/eureka/,http://eureka-cluster-8002:8002/eureka/,http://eureka-cluster-8003:8003/eureka/
+
+
+RabbitMQ:
+  SERVER:
+    USER: SERVICE-USER
+
+SERVER-USER:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule

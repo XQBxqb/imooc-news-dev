@@ -40,5 +40,16 @@ public interface ArticleControllerApi {
             @ApiParam(name = "pageSize", value = "分页的每一页显示的条数")
             @RequestParam Integer pageSize);
 
+    @ApiOperation(value = "人工审核文章",notes="人工审核文章",httpMethod = "POST")
+    @PostMapping("/doReview")
+    public GraceJSONResult doReview(@RequestParam String articleId,
+                                    @RequestParam Integer passOrNot) ;
 
+    @PostMapping("/queryAllList")
+    @ApiOperation(value = "管理员查询用户的所有文章列表", notes = "管理员查询用户的所有文章列表", httpMethod = "POST")
+    public GraceJSONResult queryAllList(@RequestParam Integer status,
+                                        @ApiParam(name = "page", value = "查询下一页的第几页", required = false)
+                                        @RequestParam Integer page,
+                                        @ApiParam(name = "pageSize", value = "分页的每一页显示的条数", required = false)
+                                        @RequestParam Integer pageSize);
 }

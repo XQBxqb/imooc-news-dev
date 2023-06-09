@@ -25,4 +25,9 @@ public class RedisCommon {
     public static final String REDIS_MY_FOLLOWED_COUNT="redis_my_followed_count";
     public static final String REDIS_MY_FANS_COUNT="redis_my_fans_count";
 
+    public static final String REDIS_ARTICLE_READ_COUNT="redis_article_read_count";
+
+    public static final String REDIS_IS_ME_READ="redis_is_me_read";
+
+    public static final String REDIS_ARTICLE_COMMENT_COUNT="redis_article_comment_count";
 }

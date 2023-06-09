@@ -1,7 +1,6 @@
 package com.imooc.utils;
 
 import com.github.pagehelper.PageInfo;
-import org.springframework.data.mongodb.core.aggregation.ArrayOperators;
 
 import java.util.List;
 
@@ -11,6 +10,7 @@ import java.util.List;
  * @explain
  */
 public class PageUtils {
+
     public static PagedGridResult pagedResult(List<?> list,
                                               Integer page){
         PageInfo<?> pageList=new PageInfo<>(list);

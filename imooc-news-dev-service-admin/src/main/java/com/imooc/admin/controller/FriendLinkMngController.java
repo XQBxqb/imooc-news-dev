@@ -4,17 +4,14 @@ import com.aliyun.core.utils.StringUtils;
 import com.imooc.admin.service.FriendLinkService;
 import com.imooc.api.controller.admin.FriendLinkMngControllerApi;
 import com.imooc.grace.result.GraceJSONResult;
-import com.imooc.grace.result.ResponseStatusEnum;
-import com.imooc.pojo.bo.SaveFriendLink;
 import com.imooc.pojo.mo.FriendLinkMO;
 import com.imooc.utils.JsonUtils;
 import com.imooc.utils.extend.DateUtil;
 import com.imooc.utils.extend.RedisCommon;
-import com.imooc.utils.extend.RedisOperator;
+import com.imooc.api.config.RedisOperator;
 import org.n3r.idworker.Sid;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
