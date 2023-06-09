@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BeansView">
+    <option name="showSidePanel" value="false" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="dda9c864-7cf5-456b-b31b-87c0ec0a2faa" name="Changes" comment="feat:springcloud" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="module" />
+    </option>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Kotlin Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\maven_reposity" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../maven/apache-maven-3.9.1" />
+        <option name="useMavenConfig" value="true" />
+        <option name="userSettingsFile" value="D:\maven\apache-maven-3.9.1\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectId" id="2MZkh3jaa6jj2UPZSW2TvIhU2T5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
+    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/ideaProject/imooc-news/imooc-news-dev&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;service.view.auto.scroll.from.source&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;785ab1bc094e261310387463faa9bbae&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;module&quot;
+    ],
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;PLAIN_TEXT&quot;
+    ]
+  }
+}</component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\ideaProject\imooc-news\imooc-news-dev\springcloud-eureka\src\main\resources" />
+      <recent name="D:\ideaProject\imooc-news\imooc-news-dev\imooc-news-dev-service-article-html\src\main\java\com\imooc\article\html" />
+      <recent name="D:\ideaProject\imooc-news\imooc-news-dev\imooc-news-dev-service-article\src\main\java\com\imooc\article" />
+      <recent name="D:\ideaProject\imooc-news\imooc-news-dev\imooc-news-dev-service-article-html\src\main\resources" />
+      <recent name="D:\ideaProject\imooc-news\imooc-news-dev\imooc-news-dev-service-article\src\main\resources\templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\idea project\imooc-news\imooc-news-dev\imooc-news-dev-common\src\main\java\com\mooc\grace\result" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.imooc.user" />
+      <recent name="com.imooc.files" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.imooc.eureka" />
+      <recent name="com.imooc.article.html.controller" />
+      <recent name="com.imooc.api.controller.articleHTML" />
+      <recent name="com.imooc.article.restTemplateUtils" />
+      <recent name="com.imooc.api.controller.article" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+    <option name="hiddenConfigurations">
+      <map>
+        <entry key="SpringBootApplicationConfigurationType">
+          <value>
+            <set>
+              <option value="imooc-news-article:7001" />
+            </set>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.imooc-news-article:7001 ">
+    <configuration name="imooc-news-admin:7005" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
+      <module name="imooc-news-dev-service-admin" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.imooc.admin.Application" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.imooc.admin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="imooc-news-article-html:7002" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
+      <module name="imooc-news-dev-service-article-html" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.imooc.article.html.Application" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.imooc.article.html.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="imooc-news-article:7001 " type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
+      <module name="imooc-news-dev-service-article" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.imooc.article.Application" />
+      <option name="URL_PATH" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.imooc.article.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="imooc-news-article:7001" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="imooc-news-dev-service-article" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.imooc.article.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="imooc-news-files:7004" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
+      <module name="imooc-news-dev-service-files" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.imooc.files.Application" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.imooc.files.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="imooc-news-user:7003" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="imooc-news-dev-service-user" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.imooc.user.Application" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.imooc.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="imooc-news-user:7013" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="imooc-news-dev-service-user" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.imooc.user.Application" />
+      <option name="VM_PARAMETERS" value="-DPORT=7013" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.imooc.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="springcloud-eureka:8001" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
+      <module name="springcloud-eureka" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.imooc.eureka.Application" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.imooc.eureka.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="springcloud-eureka:8002" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springcloud-eureka" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.imooc.eureka.Application" />
+      <option name="VM_PARAMETERS" value="-DPORT1=8002 -DPORT2=8001 -DPORT3=8003 " />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.imooc.eureka.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="springcloud-eureka:8003" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springcloud-eureka" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.imooc.eureka.Application" />
+      <option name="VM_PARAMETERS" value="-DPORT1=8003 -DPORT2=8001 -DPORT3=8002" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.imooc.eureka.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.imooc-news-user:7013" />
+      <item itemvalue="Spring Boot.springcloud-eureka:8002" />
+      <item itemvalue="Spring Boot.springcloud-eureka:8003" />
+      <item itemvalue="Spring Boot.imooc-news-article:7001" />
+      <item itemvalue="Spring Boot.imooc-news-user:7003" />
+      <item itemvalue="Spring Boot.springcloud-eureka:8001" />
+      <item itemvalue="Spring Boot.imooc-news-article:7001 " />
+      <item itemvalue="Spring Boot.imooc-news-article-html:7002" />
+      <item itemvalue="Spring Boot.imooc-news-admin:7005" />
+      <item itemvalue="Spring Boot.imooc-news-files:7004" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.imooc-news-article:7001 " />
+        <item itemvalue="Spring Boot.springcloud-eureka:8001" />
+        <item itemvalue="Spring Boot.imooc-news-files:7004" />
+        <item itemvalue="Spring Boot.imooc-news-admin:7005" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpringBootOptions">
+    <option name="showAdditionalConfigNotification" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dda9c864-7cf5-456b-b31b-87c0ec0a2faa" name="Changes" comment="" />
+      <created>1677982607597</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1677982607597</updated>
+      <workItem from="1677982610885" duration="1007000" />
+      <workItem from="1677983652156" duration="501000" />
+      <workItem from="1677997842769" duration="2742000" />
+      <workItem from="1678000896361" duration="6430000" />
+      <workItem from="1678017909120" duration="2625000" />
+      <workItem from="1678085251464" duration="2106000" />
+      <workItem from="1678186615224" duration="2948000" />
+      <workItem from="1679190812842" duration="512000" />
+      <workItem from="1679191447188" duration="3605000" />
+      <workItem from="1679207455255" duration="1444000" />
+      <workItem from="1679209975131" duration="7010000" />
+      <workItem from="1679282226407" duration="305000" />
+      <workItem from="1679577182541" duration="3275000" />
+      <workItem from="1679622999050" duration="443000" />
+      <workItem from="1679623471521" duration="481000" />
+      <workItem from="1679723286441" duration="5533000" />
+      <workItem from="1679729008203" duration="1416000" />
+      <workItem from="1679730533619" duration="4237000" />
+      <workItem from="1679734834427" duration="2619000" />
+      <workItem from="1679746959674" duration="3080000" />
+      <workItem from="1679755035240" duration="709000" />
+      <workItem from="1679793447229" duration="3390000" />
+      <workItem from="1679812653467" duration="7615000" />
+      <workItem from="1679820352864" duration="173000" />
+      <workItem from="1680142682589" duration="1302000" />
+      <workItem from="1680144009659" duration="124000" />
+      <workItem from="1680144334362" duration="1032000" />
+      <workItem from="1680312214223" duration="42000" />
+      <workItem from="1680312267677" duration="79000" />
+      <workItem from="1680312363905" duration="2284000" />
+      <workItem from="1680316899359" duration="2030000" />
+      <workItem from="1680325476932" duration="8618000" />
+      <workItem from="1680338808119" duration="355000" />
+      <workItem from="1680339183517" duration="5659000" />
+      <workItem from="1680353590261" duration="584000" />
+      <workItem from="1680404226454" duration="2816000" />
+      <workItem from="1680408606127" duration="5502000" />
+      <workItem from="1680524229325" duration="4522000" />
+      <workItem from="1680598497822" duration="874000" />
+      <workItem from="1680599393686" duration="4496000" />
+      <workItem from="1680684982846" duration="11102000" />
+      <workItem from="1680699377293" duration="2310000" />
+      <workItem from="1680706549018" duration="14000" />
+      <workItem from="1680746114449" duration="1556000" />
+      <workItem from="1680781661474" duration="2855000" />
+      <workItem from="1680873860742" duration="1720000" />
+      <workItem from="1680931829458" duration="13745000" />
+      <workItem from="1680956858225" duration="5347000" />
+      <workItem from="1681124144302" duration="4093000" />
+      <workItem from="1681210323826" duration="7502000" />
+      <workItem from="1681294632455" duration="8368000" />
+      <workItem from="1681303126171" duration="364000" />
+      <workItem from="1681307573580" duration="2430000" />
+      <workItem from="1681392906824" duration="3412000" />
+      <workItem from="1681436613361" duration="85000" />
+      <workItem from="1681476052958" duration="1460000" />
+      <workItem from="1681523252571" duration="5449000" />
+      <workItem from="1681538303827" duration="260000" />
+      <workItem from="1681540784700" duration="823000" />
+      <workItem from="1681551782708" duration="302000" />
+      <workItem from="1681552130934" duration="199000" />
+      <workItem from="1681698028964" duration="19000" />
+      <workItem from="1681909334974" duration="23000" />
+      <workItem from="1681975017900" duration="374000" />
+      <workItem from="1681976706184" duration="6000" />
+      <workItem from="1681989006054" duration="65000" />
+      <workItem from="1681989081533" duration="490000" />
+      <workItem from="1681989586584" duration="1039000" />
+      <workItem from="1682047010965" duration="33000" />
+      <workItem from="1682047055501" duration="133000" />
+      <workItem from="1682302568408" duration="43000" />
+      <workItem from="1682426903091" duration="15000" />
+      <workItem from="1682426961388" duration="19000" />
+      <workItem from="1682427434122" duration="744000" />
+      <workItem from="1682428385253" duration="52000" />
+      <workItem from="1682429422531" duration="140000" />
+      <workItem from="1682429582357" duration="199000" />
+      <workItem from="1682429820626" duration="55000" />
+      <workItem from="1682429929339" duration="19000" />
+      <workItem from="1682430160970" duration="24000" />
+      <workItem from="1682430604210" duration="1855000" />
+      <workItem from="1682434195316" duration="490000" />
+      <workItem from="1682435025247" duration="220000" />
+      <workItem from="1682592025815" duration="33000" />
+      <workItem from="1682592080222" duration="1142000" />
+      <workItem from="1682594639426" duration="119000" />
+      <workItem from="1682594778196" duration="278000" />
+      <workItem from="1682595078859" duration="5359000" />
+      <workItem from="1682600894787" duration="3193000" />
+      <workItem from="1682680736111" duration="4251000" />
+      <workItem from="1682735568601" duration="1496000" />
+      <workItem from="1682746418853" duration="331000" />
+      <workItem from="1682767701847" duration="5399000" />
+      <workItem from="1682773148890" duration="5090000" />
+      <workItem from="1682820318815" duration="3770000" />
+      <workItem from="1682828837827" duration="10064000" />
+      <workItem from="1682854406024" duration="2336000" />
+      <workItem from="1683624044059" duration="5784000" />
+      <workItem from="1683629851641" duration="8061000" />
+      <workItem from="1683645408217" duration="1988000" />
+      <workItem from="1683723627786" duration="100000" />
+      <workItem from="1683976990864" duration="6412000" />
+      <workItem from="1684045015164" duration="531000" />
+      <workItem from="1684049510933" duration="103000" />
+      <workItem from="1684049624906" duration="4558000" />
+      <workItem from="1684116744687" duration="3554000" />
+      <workItem from="1684120331419" duration="1201000" />
+      <workItem from="1684128540343" duration="4127000" />
+      <workItem from="1684140730579" duration="6711000" />
+      <workItem from="1684205510263" duration="2018000" />
+      <workItem from="1684207547121" duration="624000" />
+      <workItem from="1684319955657" duration="17000" />
+      <workItem from="1684502407997" duration="6261000" />
+      <workItem from="1684582175492" duration="1715000" />
+      <workItem from="1684584154086" duration="3472000" />
+      <workItem from="1684589716234" duration="10000" />
+      <workItem from="1684632747046" duration="5426000" />
+      <workItem from="1684654776108" duration="2881000" />
+      <workItem from="1684663782320" duration="9077000" />
+      <workItem from="1684720301367" duration="3446000" />
+      <workItem from="1684749499715" duration="7060000" />
+      <workItem from="1684821325925" duration="67000" />
+      <workItem from="1684922829691" duration="4418000" />
+      <workItem from="1684934955103" duration="1258000" />
+      <workItem from="1684936231502" duration="1681000" />
+      <workItem from="1684982045713" duration="1075000" />
+      <workItem from="1685008713840" duration="9060000" />
+      <workItem from="1685067057165" duration="690000" />
+      <workItem from="1685078700136" duration="5620000" />
+      <workItem from="1685084458578" duration="520000" />
+      <workItem from="1685111863340" duration="3241000" />
+      <workItem from="1685442957465" duration="226000" />
+      <workItem from="1685586807994" duration="7000" />
+      <workItem from="1685704078008" duration="153000" />
+      <workItem from="1685706115256" duration="2307000" />
+      <workItem from="1685772909352" duration="1320000" />
+      <workItem from="1685866849532" duration="4708000" />
+      <workItem from="1685878559866" duration="395000" />
+      <workItem from="1685890663256" duration="15000" />
+      <workItem from="1685940914862" duration="880000" />
+      <workItem from="1685942793687" duration="23000" />
+      <workItem from="1685945788057" duration="29000" />
+      <workItem from="1685963246011" duration="2654000" />
+      <workItem from="1685969472532" duration="61000" />
+      <workItem from="1686032683990" duration="7608000" />
+      <workItem from="1686054164872" duration="1019000" />
+      <workItem from="1686134431066" duration="4810000" />
+      <workItem from="1686191823506" duration="604000" />
+      <workItem from="1686295963709" duration="1512000" />
+    </task>
+    <task id="LOCAL-00001" summary="feat:user,files,admin,api,model,common完成">
+      <created>1682596209986</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1682596209986</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat:user,files,admin,api,model,common完成">
+      <created>1682596807360</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1682596807360</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat:fans,article">
+      <created>1684206532344</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1684206532344</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat:fans,article">
+      <created>1684206904034</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1684206904034</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat:fans,article">
+      <created>1684207033970</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1684207033970</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat:fans,article">
+      <created>1684207572192</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1684207572192</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat:springcloud">
+      <created>1686296082626</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1686296082626</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat:springcloud">
+      <created>1686296648873</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1686296648873</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat:user,files,admin,api,model,common完成" />
+    <MESSAGE value="feat:fans,article" />
+    <MESSAGE value="feat:springcloud" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat:springcloud" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint type="java-exception">
+          <properties class="javax.servlet.ServletException" package="javax.servlet" />
+          <option name="timeStamp" value="10" />
+        </breakpoint>
+        <breakpoint type="java-exception">
+          <properties class="org.apache.ibatis.binding.BindingException" package="org.apache.ibatis.binding" />
+          <option name="timeStamp" value="19" />
+        </breakpoint>
+        <breakpoint type="java-exception">
+          <properties class="java.lang.NoSuchMethodError" package="java.lang" />
+          <option name="timeStamp" value="20" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/imooc-news-dev-service-admin/src/main/java/com/imooc/admin/service/CategoryService.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/imooc-news-dev-service-user/src/main/java/com/imooc/user/service/impl/FanServiceImpl.java</url>
+          <line>97</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="org.springframework.amqp.core.Message" memberName="messageProperties" />
+        <PinnedItemInfo parentTag="org.springframework.data.redis.core.DefaultValueOperations" memberName="template" />
+        <PinnedItemInfo parentTag="java.lang.String" memberName="value" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

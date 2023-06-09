@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/imooc-news-dev.iml" filepath="$PROJECT_DIR$/imooc-news-dev.iml" />
+      <module fileurl="file://$PROJECT_DIR$/imooc-news-dev-common/imooc-news-dev-common.iml" filepath="$PROJECT_DIR$/imooc-news-dev-common/imooc-news-dev-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/imooc-news-dev-model/imooc-news-dev-model.iml" filepath="$PROJECT_DIR$/imooc-news-dev-model/imooc-news-dev-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/imooc-news-dev-service-admin/imooc-news-dev-service-admin.iml" filepath="$PROJECT_DIR$/imooc-news-dev-service-admin/imooc-news-dev-service-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/imooc-news-dev-service-api/imooc-news-dev-service-api.iml" filepath="$PROJECT_DIR$/imooc-news-dev-service-api/imooc-news-dev-service-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/imooc-news-dev-service-user/imooc-news-dev-service-user.iml" filepath="$PROJECT_DIR$/imooc-news-dev-service-user/imooc-news-dev-service-user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatis-generator-database/mybatis-generator-database.iml" filepath="$PROJECT_DIR$/mybatis-generator-database/mybatis-generator-database.iml" />
+    </modules>
+  </component>
+</project>
